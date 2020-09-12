@@ -56,6 +56,8 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
+" 快速查找自定义预留符号
+map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 " ==== 
 " ==== 插件配置
 " ==== 
