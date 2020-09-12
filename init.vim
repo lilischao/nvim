@@ -1,3 +1,10 @@
+" 
+ " __  __       _   _                 _           
+" |  \/  |_   _| \ | | ___  _____   _(_)_ __ ___  
+" | |\/| | | | |  \| |/ _ \/ _ \ \ / / | '_ ` _ \ 
+" | |  | | |_| | |\  |  __/ (_) \ V /| | | | | | |
+" |_|  |_|\__, |_| \_|\___|\___/ \_/ |_|_| |_| |_|
+        " |___/                                   
 let mapleader = " "
 " === nvim 的一些基本配置
 syntax on
@@ -58,12 +65,16 @@ filetype plugin on
 filetype plugin indent on
 " 快速查找自定义预留符号
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+set autochdir
+" 复制粘贴操作
+" nvim 需要安装xsel软件才能使用
+set clipboard+=unnamedplus
+
 " ==== 
 " ==== 插件配置
 " ==== 
 call plug#begin('~/.config/nvim/plugged')
 
-" vim 状态栏插件
 Plug 'vim-airline/vim-airline'
-
+Plug 'tpope/vim-surround'
 call plug#end()
